@@ -14,5 +14,7 @@ In this project, we learned about:
     How to use variables with the while loop
     How to print variables using printf
     What is the ASCII character set
-    What are the purpose of the gcc flags -m32 and -m64
+    What are the purpose of the gcc flags -m32 and -m
 
+We worked on different tasks using if/else statments, do... while/while/for loops and using different variables.
+All of our code is using Betty Style using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
