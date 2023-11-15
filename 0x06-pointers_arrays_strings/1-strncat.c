@@ -5,7 +5,7 @@
  * @src: second string
  * @n: the max of bytes to add from src
  *
- * Return: resulting string 
+ * Return: resulting string
  */
 
 char *_strncat(char *dest, char *src, int n)
