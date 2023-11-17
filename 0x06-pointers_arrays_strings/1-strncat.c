@@ -19,14 +19,14 @@ char *_strncat(char *dest, char *src, int n)
 	if (len2 >= n)
 	{
 		for (i = 0; i < n; i++)
-			dest[len + i] = src[i];
-	dest[len + n] = '\0';
+			dest[len1 + i] = src[i];
+	dest[len1 + n] = '\0';
 	}
 	else
 	{
 		for (i = 0; i < len2; i++)
-			dest[len + i] = src[i];
-		dest[len + n] = '\0';
+			dest[len1 + i] = src[i];
+		dest[len1 + len2] = '\0';
 	}
 	return (dest);
 }
