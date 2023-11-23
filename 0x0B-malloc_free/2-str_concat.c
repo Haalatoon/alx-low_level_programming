@@ -1,42 +1,35 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
+ * str_concat - concatenates two strings
+ * @s1: first string to concat
+ * @s2: second string to concat
  * Return: concat of s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *conct;
-	int i, ci;
+	int i, j, sz1 = 0, sz2 = 0;
+	char *cnc;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	i = ci = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ci] != '\0')
-		ci++;
-	conct = malloc(sizeof(char) * (i + ci + 1));
-
-	if (conct == NULL)
+	while (s1[sz1] != '\0')
+		sz1++;
+	while (s2[sz2] != '\0')
+		sz2++;
+	cnc = malloc(sizeof(char) * (sz1 + sz2 + 1));
+	if (cnc == NULL)
 		return (NULL);
-	i = ci = 0;
-	while (s1[i] != '\0')
+	for (i = 0; s1[i]; i++)
+		cnc[i] = s1[i];
+	for (j = 0; s2[j]; j++)
 	{
-		conct[i] = s1[i];
+		cnc[i] = s2[j];
 		i++;
 	}
-
-	while (s2[ci] != '\0')
-	{
-		conct[i] = s2[ci];
-		i++, ci++;
-	}
-	conct[i] = '\0';
-	return (conct);
+	cnc[i + 1] = '\0';
+	return (cnc);
+	free(cnc);
 }
