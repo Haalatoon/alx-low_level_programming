@@ -2,7 +2,7 @@
 #include <stddef.h>
 /**
  * _strchr - locates a character in a string
- * @s: string parameter
+ * @c: string parameter
  * @character to locate
  * Return: a pointer to the first occurrence of the character c
  * or NULL if the character is not found
